@@ -67,7 +67,7 @@ A more detailed sample is available in the sample app's [MainActivity](sample/sr
 
 ## License
 
-    Copyright 2015 Zhang Hai
+    Copyright 2017 Zhang Hai
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
