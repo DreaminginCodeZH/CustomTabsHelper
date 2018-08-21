@@ -8,7 +8,6 @@ apply plugin: 'com.android.application'
 android {
 
     compileSdkVersion Integer.parseInt(project.ANDROID_COMPILE_SDK_VERSION)
-    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
 
     defaultConfig {
         applicationId "me.zhanghai.android.customtabshelper.sample"
@@ -37,20 +36,9 @@ android {
     }
 }
 
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
-    }
-}
-apply plugin: 'android-apt'
-
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:26.0.1'
-    compile 'com.jakewharton:butterknife:8.8.0'
-    apt 'com.jakewharton:butterknife-compiler:8.8.0'
-    compile project(':library')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation project(':library')
 }
